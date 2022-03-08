@@ -20,15 +20,15 @@ function [] = Save_3D_Figure(h, path_str, cbar, z_lab, width_pdf)
     
     % Set labels format
     set(gca,'TickLabelInterpreter','latex');
-    set(gca,'FontSize',10.5);
-    set(gca,'LabelFontSizeMultiplier',1.35);
-    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'FontSize',11);
+    set(gca,'LabelFontSizeMultiplier',1.1);
+    set(gca,'TitleFontSizeMultiplier',1.1);
     
     if strcmp(cbar, 'on')
         c = colorbar;
         c.TickLabelInterpreter = 'Latex'; 
     end
-    set(get(gca,'zlabel'),'rotation',0)
+    % set(get(gca,'zlabel'),'rotation',0)
     zlh = get(gca,'zlabel');
     zlh.Position(1) = z_lab*zlh.Position(1);
 
@@ -36,6 +36,6 @@ function [] = Save_3D_Figure(h, path_str, cbar, z_lab, width_pdf)
     set(h,'Units','Inches');
     pos = get(h,'Position');
     set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3)+width_pdf/10, pos(4)])
-    print(h, path_str{1}(1:end-3),['-d', path_str{1}(end-2:end)],'-r0','-painters')
+    print(h, path_str,['-d', path_str{1}(end-2:end)],'-r0','-painters')
 
 end

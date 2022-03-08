@@ -1,4 +1,4 @@
-function [] = Save_as_PDF(h, path, y_label_horientation, y_lab, y_pdf)
+function [] = Save_2D_Figure(h, path_str, y_label_horientation, y_lab, y_pdf)
 
     % This function saves a figure to PDF format
     % Made by: Daniel del Rio Velilla
@@ -9,7 +9,6 @@ function [] = Save_as_PDF(h, path, y_label_horientation, y_lab, y_pdf)
         case 3
             y_lab = 0;
             y_pdf = 0;
-            
         case 4
             y_pdf = y_lab;  
         otherwise
@@ -17,9 +16,9 @@ function [] = Save_as_PDF(h, path, y_label_horientation, y_lab, y_pdf)
     
     % Set labels format
     set(gca,'TickLabelInterpreter','latex');
-    set(gca,'FontSize',10.5);   
-    set(gca,'LabelFontSizeMultiplier',1.35);
-    set(gca,'TitleFontSizeMultiplier',1.25);
+    set(gca,'FontSize',11);
+    set(gca,'LabelFontSizeMultiplier',1.1);
+    set(gca,'TitleFontSizeMultiplier',1.1);
     
     % Choose the axis position
     if strcmp(y_label_horientation,'horizontal')
@@ -53,6 +52,6 @@ function [] = Save_as_PDF(h, path, y_label_horientation, y_lab, y_pdf)
     set(h,'Units','Inches');
     pos = get(h,'Position');
     set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3)+y_pdf/10, pos(4)])
-    print(h, path,'-dpdf','-r0','-painters')
+    print(h, path_str,['-d', path_str{1}(end-2:end)],'-r0','-painters')
 
 end

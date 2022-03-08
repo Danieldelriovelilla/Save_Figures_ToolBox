@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3221523293" file="C:\Users\danie\OneDrive - Universidad Politécnica de Madrid\Save_Figures_ToolBox\Code\Save_Figures_ToolBox.prj" location="C:\Users\danie\OneDrive - Universidad Politécnica de Madrid\Save_Figures_ToolBox\Code" name="Save_Figures_ToolBox" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="11591515" file="C:\Users\danie\OneDrive - Universidad Politécnica de Madrid\Save_Figures_ToolBox\Code\Save_Figures_ToolBox.prj" location="C:\Users\danie\OneDrive - Universidad Politécnica de Madrid\Save_Figures_ToolBox\Code" name="Save_Figures_ToolBox" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Save_Figures_ToolBox</param.appname>
     <param.authnamewatermark>Daniel del Río Velilla</param.authnamewatermark>
     <param.email>daniel_drv@hotmail.es</param.email>
@@ -9,7 +9,7 @@
 
 - table2latex.m reads a Table type variable in matlab and generates a .tex with caption and label.</param.description>
     <param.screenshot>${PROJECT_ROOT}\Tiempo.png</param.screenshot>
-    <param.version>2.4</param.version>
+    <param.version>2.4.4</param.version>
     <param.output>${PROJECT_ROOT}\Save_Figures_ToolBox.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -101,10 +101,12 @@
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\Example_Functions.m</file>
       <file>${PROJECT_ROOT}\FEM_Omega_1.pdf</file>
+      <file>${PROJECT_ROOT}\Save_2D_Figure.m</file>
       <file>${PROJECT_ROOT}\Save_3D_Figure.m</file>
       <file>${PROJECT_ROOT}\Save_as_PDF.m</file>
       <file>${PROJECT_ROOT}\Save_as_PNG.m</file>
       <file>${PROJECT_ROOT}\Save_as_SVG.m</file>
+      <file>${PROJECT_ROOT}\Save_Figure.asv</file>
       <file>${PROJECT_ROOT}\Save_Figure.m</file>
       <file>${PROJECT_ROOT}\Save_Heatmap.m</file>
       <file>${PROJECT_ROOT}\svg_test.svg</file>

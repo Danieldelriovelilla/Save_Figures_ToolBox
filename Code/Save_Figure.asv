@@ -22,15 +22,8 @@ else
     rotateit = false;
 end
 
-% Axis position
-%{
-axposition = find(strcmpi(varargin, 'axposition'), 1);
-if ~isempty(axposition)
-    axposition_2D = varargin{axposition+1};
-else
-    axposition_2D = [0.1300, 0.1100, 0.7750, 0.8150];
-end
-%}
+% Axi
+
 
 
 %% LABEL POSITIONING
@@ -40,9 +33,6 @@ naxes = numel(axis(ax))/2;
 
 
 if naxes == 2
-    % Axis position
-    % ax.Position = axposition_2D;
-
     % Move x label
     ax.XLabel.Position(1) = 0.9*( ax.XLim(2) - ax.XLim(1) ) + ax.XLim(1); 
 
@@ -109,7 +99,7 @@ ax.TitleFontSizeMultiplier = 1.;
 h.Units = 'Inches';
 h.PaperPositionMode = 'Auto';
 h.PaperUnits = 'Inches';
-h.PaperSize = [h.Position(3)*(2 + label_length/(2*35)/(ax.XLim(2)-ax.XLim(1))), h.Position(4)];
+h.PaperSize = [h.Position(3)*(1 + label_length/(2*35)/(ax.XLim(2)-ax.XLim(1))), h.Position(4)];
 
 % Save figure as desired format
 if saveit
